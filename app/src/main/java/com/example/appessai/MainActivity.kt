@@ -4,10 +4,17 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
+import androidx.activity.compose.setContent
+import androidx.navigation.compose.rememberNavController
+import com.example.fitnessapp.navigation.NavigationGraph
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContent {
+            val navController = rememberNavController()
+            NavigationGraph(navController)
+        }
         setContentView(R.xml.activity_main)
 
         val btnHypertrophie = findViewById<Button>(R.id.btn_hypertrophie)
