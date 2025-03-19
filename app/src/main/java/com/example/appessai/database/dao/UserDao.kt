@@ -1,29 +1,14 @@
 package com.example.appessai.database.dao
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Query
-import androidx.room.Update
-import androidx.room.Delete
+import androidx.room.*
 import com.example.appessai.database.entity.User
-import java.util.*
-
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface UserDao {
+    @Query("SELECT * FROM user_table WHERE id = 1")
+    fun getUser(): Flow<User>
 
-    @Insert
-    suspend fun insertUser(user: User)
-
-    @Query("SELECT * FROM user WHERE id = :id")
-    suspend fun getUserById(id: String): User?  // Correction ici
-
-    @Update
-    suspend fun updateUser(user: User)
-
-    @Delete
-    suspend fun deleteUser(user: User)
-
-    @Query("SELECT * FROM user")
-    suspend fun getAllUsers(): List<User>
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertOrUpdate(user: User)
 }

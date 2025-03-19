@@ -1,18 +1,25 @@
-package com.example.fitnessapp.navigation
+package com.example.appessai.navigation
 
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.appessai.ui.CardioScreen
-import com.example.appessai.ui.CustomWorkoutScreen
-import com.example.appessai.ui.HomeScreen
+import com.example.appessai.ui.UserScreen
+import com.example.appessai.ui.UserFormScreen
+import com.example.appessai.viewmodel.UserViewModel
 
 @Composable
-fun NavigationGraph(navController: NavHostController) {
-    NavHost(navController, startDestination = "home") {
-        composable("home") { HomeScreen(navController) }
-        composable("cardio") { CardioScreen() }
-        composable("custom") { CustomWorkoutScreen() }
+fun NavigationGraph(navController: NavHostController, userViewModel: UserViewModel) {
+    val user by userViewModel.user.collectAsState(initial = null)
+
+    NavHost(navController = navController, startDestination = if (user == null) "user_form" else "user_screen") {
+        composable("user_form") {
+            UserFormScreen(userViewModel) {
+                navController.navigate("user_screen")
+            }
+        }
+        composable("user_screen") {
+            UserScreen(userViewModel)
+        }
     }
 }

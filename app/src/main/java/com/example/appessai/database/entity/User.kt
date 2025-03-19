@@ -2,16 +2,13 @@ package com.example.appessai.database.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import androidx.room.ForeignKey
-import java.util.UUID
 
-
-@Entity(tableName = "user")
+@Entity(tableName = "user_table")
 data class User(
-    @PrimaryKey val id: UUID = UUID.randomUUID(),
-    val name: String,
+    @PrimaryKey val id: Int = 1,
+    val firstName: String,
+    val lastName: String,
     val age: Int,
     val weight: Float,
-    val height: Float,
-    val create: Long = System.currentTimeMillis()
+    val height: Int
 )
