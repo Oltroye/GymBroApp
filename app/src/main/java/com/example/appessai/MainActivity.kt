@@ -8,7 +8,7 @@ import android.widget.Button
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.xml.activity_main)
 
         val btnHypertrophie = findViewById<Button>(R.id.btn_hypertrophie)
         val btnForce = findViewById<Button>(R.id.btn_force)

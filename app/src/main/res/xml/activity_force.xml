@@ -10,36 +10,26 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="Suivi des progrès"
+            android:text="Programme Force"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <TextView
-            android:text="🔸 Semaine 1 : Développé couché - 60kg"
+            android:text="1. Squat - 5x5 - 90kg"
             android:layout_marginBottom="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <TextView
-            android:text="🔸 Semaine 2 : Développé couché - 62.5kg"
+            android:text="2. Soulevé de terre - 5x5 - 110kg"
             android:layout_marginBottom="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <TextView
-            android:text="🔸 Semaine 3 : Développé couché - 65kg"
-            android:layout_marginBottom="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <com.github.mikephil.charting.charts.LineChart
-            android:id="@+id/lineChart"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_marginTop="16dp"/>
+        <!-- Tu peux ajouter d'autres exercices -->
 
     </LinearLayout>
 </ScrollView>
