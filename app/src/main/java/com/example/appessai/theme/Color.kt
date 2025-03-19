@@ -1,4 +1,4 @@
-package com.example.appessai.ui.theme
+package com.example.appessai.theme
 
 import androidx.compose.ui.graphics.Color
 
