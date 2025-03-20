@@ -13,16 +13,17 @@
         android:theme="@style/Theme.AppEssai"
         tools:targetApi="31" >
 
-        <activity android:name=".ForceActivity"/>
-        <activity android:name=".HypertrophieActivity"/>
-        <activity android:name=".MainActivity"/>
-            <activity android:name=".SuiviActivity" />
-
+        <!-- MainActivity doit contenir l’intent-filter -->
+        <activity android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-    </application>
 
+        <activity android:name=".ForceActivity"/>
+        <activity android:name=".HypertrophieActivity"/>
+        <activity android:name=".SuiviActivity"/>
+    </application>
 </manifest>

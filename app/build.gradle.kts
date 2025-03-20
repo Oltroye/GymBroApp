@@ -42,6 +42,7 @@ android {
 
 dependencies {
 
+    implementation(libs.mpandroidchart)
     implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
     implementation("androidx.navigation:navigation-compose:2.8.9")
     implementation(libs.androidx.compose.runtime.livedata)
@@ -57,6 +58,8 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.filament.android)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

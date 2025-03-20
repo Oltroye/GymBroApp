@@ -1,5 +1,6 @@
 package com.example.appessai
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +10,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.fitnessapp.navigation.NavigationGraph
 
 class MainActivity : AppCompatActivity() {
+    @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
