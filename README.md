@@ -26,8 +26,8 @@ L'application a été conçue pour aider les amateurs de musculation et de fitne
     - Force
     - Hypertrophie
     - HIIT
-    - Cardio
-  - Option de création et de personnalisation d’un programme d'entraînement
+    - Option de création et de personnalisation d’un programme d'entraînement
+   
 
 - **Intégration de la Balance Connectée :**
   - Construction d'une balance connectée utilisant Raspberry Pi ou Arduino
