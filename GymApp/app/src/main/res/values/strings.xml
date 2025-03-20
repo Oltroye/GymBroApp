@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GymApp</string>
+    <string name="session_summary">Programme sélectionné : %1$s. Liste des exercices pré-définis…</string>
+</resources>

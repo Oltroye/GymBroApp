@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/userInputFragment">
+
+    <fragment
+        android:id="@+id/userInputFragment"
+        android:name="com.example.gymapp.ui.fragments.UserInputFragment"
+        android:label="Informations Utilisateur">
+        <action
+            android:id="@+id/action_userInputFragment_to_programSelectionFragment"
+            app:destination="@id/programSelectionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/programSelectionFragment"
+        android:name="com.example.gymapp.ui.fragments.ProgramSelectionFragment"
+        android:label="Choix du Programme">
+        <action
+            android:id="@+id/action_programSelectionFragment_to_sessionSummaryFragment"
+            app:destination="@id/sessionSummaryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sessionSummaryFragment"
+        android:name="com.example.gymapp.ui.fragments.SessionSummaryFragment"
+        android:label="Résumé de la Séance">
+        <!-- Déclaration de l'argument 'programType' pour Safe Args -->
+        <argument
+            android:name="programType"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_sessionSummaryFragment_to_trainingFragment"
+            app:destination="@id/trainingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/trainingFragment"
+        android:name="com.example.gymapp.ui.fragments.TrainingFragment"
+        android:label="Entraînement">
+        <argument
+            android:name="programType"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_trainingFragment_to_statsFragment"
+            app:destination="@id/statsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/statsFragment"
+        android:name="com.example.gymapp.ui.fragments.StatsFragment"
+        android:label="Statistiques" />
+</navigation>
